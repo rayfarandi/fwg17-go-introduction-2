@@ -14,4 +14,17 @@ func main() {
 		rounded := Round(num, 0.10)
 		fmt.Printf("%.2f rounded to  %.2f\n", num, rounded)
 	}
+
+	// task2
+
+	DeretAngkaPrima(0, 40)
+	fmt.Println("Deret Angka Prima")
+
+	DeretAngkaGanjil(0, 40)
+	fmt.Println("Deret Angka Ganjil")
+
+	DeretAngkaGenap(0, 40)
+	fmt.Println("Deret Angka Genap")
+	// task3
+
 }
