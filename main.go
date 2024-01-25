@@ -12,7 +12,7 @@ func main() {
 	// Menampilkan hasil
 	for _, num := range numbers {
 		rounded := Round(num, 0.10)
-		fmt.Printf("%.2f rounded to  %.2f\n", num, rounded)
+		fmt.Printf("%.2f dibulatkan menjadi  %.2f\n", num, rounded)
 	}
 
 	// task2
@@ -25,6 +25,11 @@ func main() {
 
 	DeretAngkaGenap(0, 40)
 	fmt.Println("Deret Angka Genap")
+
+	DeretAngkaFibo(40)
+	fmt.Println("Deret Angka Fiboonachi")
+
 	// task3
+	tabungPerhitungan()
 
 }

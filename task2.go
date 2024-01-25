@@ -37,3 +37,13 @@ func DeretAngkaGenap(x, y int) {
 		}
 	}
 }
+
+func DeretAngkaFibo(y int) {
+	i := 0
+	fib := []int{0, 1}
+	limit := y
+	for i = 2; fib[len(fib)-1]+fib[len(fib)-2] < limit; i++ {
+		fib = append(fib, fib[len(fib)-1]+fib[len(fib)-2])
+	}
+	fmt.Printf("%v", fib)
+}
