@@ -32,7 +32,7 @@ func main() {
 	fibo := deret.AngkaFibo()
 	fmt.Println("Deret Fibonacci:", fibo)
 
-	// task3
+	// // task3
 	tabungPerhitungan()
 
 }
