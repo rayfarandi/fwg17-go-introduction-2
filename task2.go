@@ -1,49 +1,51 @@
 package main
 
-import "fmt"
+type Deret struct {
+	X     int
+	Y     int
+	Limit int
+}
 
-func DeretAngkaPrima(x, y int) {
-
-	for i := x; i <= y; i++ {
+func (d *Deret) AngkaPrima() []int {
+	hasil := []int{}
+	for i := d.X; i <= d.Y; i++ {
 		numPrima := true
 		for j := 2; j < i; j++ {
-
 			if i%j == 0 {
 				numPrima = false
 				break
 			}
 		}
 		if numPrima && i > 1 {
-
-			fmt.Printf("%d ", i)
+			hasil = append(hasil, i)
 		}
-
 	}
+	return hasil
 }
-func DeretAngkaGanjil(x, y int) {
-	for i := x; i <= y; i++ {
+func (d *Deret) AngkaGanjil() []int {
+	hasil := []int{}
+	for i := d.X; i <= d.Y; i++ {
 		if i%2 != 0 {
-			fmt.Printf("%d ", i)
+			hasil = append(hasil, i)
 		}
-
 	}
-
+	return hasil
 }
 
-func DeretAngkaGenap(x, y int) {
-	for i := x; i <= y; i++ {
+func (d *Deret) AngkaGenap() []int {
+	hasil := []int{}
+	for i := d.X; i <= d.Y; i++ {
 		if i%2 == 0 {
-			fmt.Printf("%d ", i)
+			hasil = append(hasil, i)
 		}
 	}
+	return hasil
 }
 
-func DeretAngkaFibo(y int) {
-	i := 0
-	fib := []int{0, 1}
-	limit := y
-	for i = 2; fib[len(fib)-1]+fib[len(fib)-2] < limit; i++ {
-		fib = append(fib, fib[len(fib)-1]+fib[len(fib)-2])
+func (d *Deret) AngkaFibo() []int {
+	hasil := []int{0, 1}
+	for i := 2; hasil[len(hasil)-1]+hasil[len(hasil)-2] < d.Limit; i++ {
+		hasil = append(hasil, hasil[len(hasil)-1]+hasil[len(hasil)-2])
 	}
-	fmt.Printf("%v", fib)
+	return hasil
 }

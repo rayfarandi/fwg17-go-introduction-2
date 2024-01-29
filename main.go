@@ -13,21 +13,24 @@ func main() {
 	for _, num := range numbers {
 		rounded := Round(num, 0.10)
 		fmt.Printf("%.2f dibulatkan menjadi  %.2f\n", num, rounded)
+
 	}
 
 	// task2
 
-	DeretAngkaPrima(0, 40)
-	fmt.Println("Deret Angka Prima")
+	deret := Deret{X: 0, Y: 40, Limit: 40}
+	prima := deret.AngkaPrima()
 
-	DeretAngkaGanjil(0, 40)
-	fmt.Println("Deret Angka Ganjil")
+	fmt.Println("Deret Angka Prima:", prima)
 
-	DeretAngkaGenap(0, 40)
-	fmt.Println("Deret Angka Genap")
+	ganjil := deret.AngkaGanjil()
+	fmt.Println("Deret Angka Ganjil:", ganjil)
 
-	DeretAngkaFibo(40)
-	fmt.Println("Deret Angka Fiboonachi")
+	genap := deret.AngkaGenap()
+	fmt.Println("Deret Angka Genap:", genap)
+
+	fibo := deret.AngkaFibo()
+	fmt.Println("Deret Fibonacci:", fibo)
 
 	// task3
 	tabungPerhitungan()
