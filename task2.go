@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type Deret struct {
 	X     int
 	Y     int
@@ -48,4 +50,23 @@ func (d *Deret) AngkaFibo() []int {
 		hasil = append(hasil, hasil[len(hasil)-1]+hasil[len(hasil)-2])
 	}
 	return hasil
+}
+
+func (d *Deret) CheckLimit() error {
+	if d.Limit < 0 {
+		return fmt.Errorf("limit tidak negatif")
+	}
+	return nil
+}
+func (d *Deret) CheckY() error {
+	if d.Y < 0 {
+		return fmt.Errorf("y tidak negatif")
+	}
+	return nil
+}
+func (d *Deret) CheckX() error {
+	if d.X < 0 {
+		return fmt.Errorf("x tidak negatif")
+	}
+	return nil
 }

@@ -20,13 +20,13 @@ type tabung struct {
 	phi, jari2, tinggi float64
 }
 
-func (t tabung) luas() float64 {
+func (t *tabung) luas() float64 {
 	return 2 * t.phi * t.jari2 * (t.jari2 + t.tinggi)
 }
-func (t tabung) keliling() float64 {
+func (t *tabung) keliling() float64 {
 	return 2 * t.phi * t.jari2
 }
-func (t tabung) volume() float64 {
+func (t *tabung) volume() float64 {
 	return t.phi * math.Pow(t.jari2, 2) * t.tinggi
 }
 func tabungPerhitungan() {
